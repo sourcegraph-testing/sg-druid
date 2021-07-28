@@ -9,7 +9,7 @@ var ruleTypes = [
   "JSON"
 ];
 
-function makeRuleDiv(rule) {
+const :[fn~\w+] = (rule) => {
   var retVal = "<div class='rule'>";
 
   if (rule === null || typeof rule === "undefined") {
@@ -21,7 +21,7 @@ function makeRuleDiv(rule) {
   return retVal;
 }
 
-function makeRuleComponents(type) {
+const :[fn~\w+] = (type) => {
   var components = "<button type='button' class='delete_rule'>X</button>";
   components +=
   "<span class='rule_dropdown'>" +
@@ -44,7 +44,7 @@ function makeRuleComponents(type) {
   return components;
 }
 
-function makeRuleBody(rule) {
+const :[fn~\w+] = (rule) => {
   var retVal = "<span class='rule_body'>";
   if (rule !== null && typeof rule !== "undefined") {
     switch (rule.type) {
@@ -71,33 +71,33 @@ function makeRuleBody(rule) {
   return retVal;
 }
 
-function makeLoadByInterval(rule) {
+const :[fn~\w+] = (rule) => {
    return "<span class='rule_label'>interval</span><input type='text' class='long_text' name='interval' " + "value='" + rule.interval + "'/>" +
           "<span class='rule_label'>replicants</span><input type='text' class='short_text' name='replicants' " + "value='" + rule.replicants + "'/>" +
           makeTiersDropdown(rule)
    ;
 }
 
-function makeLoadByPeriod(rule) {
+const :[fn~\w+] = (rule) => {
   return "<span class='rule_label'>period</span><input type='text' name='period' " + "value='" + rule.period + "'/>" +
          "<span class='rule_label'>replicants</span><input type='text' class='short_text' name='replicants' " + "value='" + rule.replicants + "'/>" +
          makeTiersDropdown(rule)
   ;
 }
 
-function makeDropByInterval(rule) {
+const :[fn~\w+] = (rule) => {
    return "<span class='rule_label'>interval</span><input type='text' name='interval' " + "value='" + rule.interval + "'/>";
 }
 
-function makeDropByPeriod(rule) {
+const :[fn~\w+] = (rule) => {
    return "<span class='rule_label'>period</span><input type='text' name='period' " + "value='" + rule.period + "'/>";
 }
 
-function makeJSON() {
+const :[fn~\w+] = () => {
   return "<span class='rule_label'>JSON</span><input type='text' class='very_long_text' name='JSON'/>";
 }
 
-function makeTiersDropdown(rule) {
+const :[fn~\w+] = (rule) => {
   var retVal = "<span class='rule_label'>tier</span><select class='tiers' name='tier'>"
 
   $.each(tiers, function(index, tier) {
@@ -112,7 +112,7 @@ function makeTiersDropdown(rule) {
   return retVal;
 }
 
-function getRules() {
+const :[fn~\w+] = () => {
   var selected = $('#datasources option:selected').text();
   if (selected !== "") {
     $.getJSON("/info/rules/" + selected, function(data) {
@@ -126,7 +126,7 @@ function getRules() {
   }
 }
 
-function domToRule(domRule) {
+const :[fn~\w+] = (domRule) => {
   var ruleType = $($(domRule).find(".rule_dropdown_types:first")).val();
   var inputs = $($(domRule).find(".rule_body:first")).children(":not(span)");
 
