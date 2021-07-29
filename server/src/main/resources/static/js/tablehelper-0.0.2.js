@@ -2,7 +2,7 @@
 var oTable = [];
 
 // flattens JSON from Druid and builds a table row per segment
-function buildTable(data, el, dontDisplay, table, row) {
+const :[fn~\w+] = (data, el, dontDisplay, table, row) => {
   table = typeof table !== 'undefined' ? table : new DruidTable();
   row = typeof row !== 'undefined' ? row : 0;
   dontDisplay = typeof dontDisplay !== 'undefined' ? dontDisplay : [];
@@ -26,7 +26,7 @@ function buildTable(data, el, dontDisplay, table, row) {
   initDataTable(el);
 }
 
-function setTable(data, el, dontDisplay, table, row, fieldNamespace) {
+const :[fn~\w+] = (data, el, dontDisplay, table, row, fieldNamespace) => {
   for (var field in data) {
     if (_.contains(dontDisplay, field)) {
       // do nothing
@@ -40,7 +40,7 @@ function setTable(data, el, dontDisplay, table, row, fieldNamespace) {
   }
 }
 
-function initDataTable(el) {
+const :[fn~\w+] = (el) => {
   // dataTable stuff (http://www.datatables.net/)
   var asInitVals = [];
 
